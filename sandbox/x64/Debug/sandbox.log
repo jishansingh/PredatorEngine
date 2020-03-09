@@ -1,0 +1,4 @@
+﻿sandbox.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __cdecl predator::Application::Application(void)" (__imp_??0Application@predator@@QEAA@XZ) referenced in function "public: __cdecl Sandbox::Sandbox(void)" (??0Sandbox@@QEAA@XZ)
+sandbox.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __cdecl predator::Application::~Application(void)" (__imp_??1Application@predator@@UEAA@XZ) referenced in function "public: virtual __cdecl Sandbox::~Sandbox(void)" (??1Sandbox@@UEAA@XZ)
+sandbox.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __cdecl predator::Application::Run(void)" (__imp_?Run@Application@predator@@QEAAXXZ) referenced in function main
+C:\Users\ringmaker\source\repos\predator\x64\Debug\sandbox.exe : fatal error LNK1120: 3 unresolved externals
