@@ -1,5 +1,5 @@
 #include "Application.h"
-
+#include "predator/Log.h"
 predator::Application::Application()
 {
 }

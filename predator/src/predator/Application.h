@@ -1,6 +1,6 @@
 #pragma once
 #include "Core.h"
-
+#include "events/Event.h"
 namespace predator{
 
 	class PD_API Application
@@ -10,7 +10,7 @@ namespace predator{
 		virtual ~Application();
 		void Run();
 	};
-
+	Application* createApplication();
 }
 
 

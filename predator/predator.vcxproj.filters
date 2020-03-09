@@ -4,6 +4,9 @@
     <Filter Include="predator">
       <UniqueIdentifier>{4641D112-320E-2C1E-5B27-1AC6475361AC}</UniqueIdentifier>
     </Filter>
+    <Filter Include="predator\events">
+      <UniqueIdentifier>{8A16D904-F6A1-46C9-FFB2-C9BD6BBDA2C9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\predator.h" />
@@ -16,10 +19,19 @@
     <ClInclude Include="src\predator\Log.h">
       <Filter>predator</Filter>
     </ClInclude>
-    <ClInclude Include="src\predator\events\Event.h" />
-    <ClInclude Include="src\predator\events\KeyEvent.h" />
-    <ClInclude Include="src\predator\events\ApplicationEvent.h" />
-    <ClInclude Include="src\predator\events\MouseEvent.h" />
+    <ClInclude Include="src\predator\events\ApplicationEvent.h">
+      <Filter>predator\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\predator\events\Event.h">
+      <Filter>predator\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\predator\events\KeyEvent.h">
+      <Filter>predator\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\predator\events\MouseEvent.h">
+      <Filter>predator\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\predator\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\predator\Application.cpp">

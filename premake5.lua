@@ -26,6 +26,7 @@ project "predator"
 
 	includedirs
 	{
+		"predator/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 	filter "system:windows"
