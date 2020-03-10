@@ -18,6 +18,8 @@ project "predator"
 	targetdir ("bin/" ..outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
 	
+	pchheader "pdpch.h"
+	pchsource "predator/src/pdpch.cpp"
 	files
 	{
 		"%{prj.name}/src/**.h",

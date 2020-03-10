@@ -1,9 +1,9 @@
 #pragma once
+#include "pdpch.h"
 
 #include"predator/Core.h"
-#include<string>
-#include <functional>
 namespace predator {
+
 	enum class EventType {
 		None=0,KeyPressed,KeyReleased,
 		MouseMoved, MouseScrolled, MouseButtonPressed, MouseButtonReleased,
@@ -19,21 +19,24 @@ namespace predator {
 		EventCategoryMouse       = BIT(3),
 		EventCategoryMouseButton = BIT(4)
 	};
+	#define EVENT_CLASS_TYPE(type) static EventType getStaticType(){return EventType::##type;} virtual EventType getEventType() const override{return getStaticType();}virtual const char* getName()const override{return #type;}
+
+	#define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override{return category;}
 
 	class PD_API Event {
 		friend class EventDispatcher;
 	public:
 		virtual EventType getEventType() const = 0;
 		virtual int getCategoryFlags() const = 0;
-		virtual char* getName() const = 0;
-		virtual std::string toString()const { return getName(); }
+		virtual const char* getName() const = 0;
+		virtual std::string ToString()const { return getName(); }
 		inline bool isInCategory(EventCategory category) {
 			return getCategoryFlags() & (int)category;
 		}
 	protected:
 		bool m_handled = false;
 	};
-	class PD_API EventDispatcher {
+	class EventDispatcher {
 		template<typename T>
 		using EventFn = std::function< bool(T&) >;
 	public:
@@ -53,7 +56,7 @@ namespace predator {
 	};
 
 	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
-		return os << e.toString();
+		return os << e.ToString();
 	}
 
 }

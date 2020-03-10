@@ -143,6 +143,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\pdpch.h" />
     <ClInclude Include="src\predator.h" />
     <ClInclude Include="src\predator\Application.h" />
     <ClInclude Include="src\predator\Core.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="src\predator\events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\pdpch.cpp" />
     <ClCompile Include="src\predator\Application.cpp" />
     <ClCompile Include="src\predator\Log.cpp" />
   </ItemGroup>

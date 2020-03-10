@@ -7,5 +7,6 @@ public:
 };
 
 predator::Application* predator::createApplication() {
-	return new Sandbox();
+	auto s = new Sandbox();
+	return (s);
 }

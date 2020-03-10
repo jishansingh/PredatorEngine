@@ -16,6 +16,9 @@
     <ClInclude Include="src\predator\Core.h">
       <Filter>predator</Filter>
     </ClInclude>
+    <ClInclude Include="src\predator\EntryPoint.h">
+      <Filter>predator</Filter>
+    </ClInclude>
     <ClInclude Include="src\predator\Log.h">
       <Filter>predator</Filter>
     </ClInclude>
@@ -31,7 +34,7 @@
     <ClInclude Include="src\predator\events\MouseEvent.h">
       <Filter>predator\events</Filter>
     </ClInclude>
-    <ClInclude Include="src\predator\EntryPoint.h" />
+    <ClInclude Include="src\pdpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\predator\Application.cpp">
@@ -40,5 +43,6 @@
     <ClCompile Include="src\predator\Log.cpp">
       <Filter>predator</Filter>
     </ClCompile>
+    <ClCompile Include="src\pdpch.cpp" />
   </ItemGroup>
 </Project>

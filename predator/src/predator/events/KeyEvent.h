@@ -1,6 +1,5 @@
 #pragma once
 #include"Event.h"
-#include<sstream>
 namespace predator {
 	class PD_API KeyEvent :public Event{
 	public:
@@ -20,7 +19,7 @@ namespace predator {
 
 		inline int getKeyCount()const { return m_keycount; }
 
-		std::string toString()const override {
+		std::string ToString()const override {
 			std::stringstream ss;
 			ss << "KeyPressedEvent " << m_keycode << "(" << m_keycount << " repeats)";
 			return ss.str();
@@ -34,7 +33,7 @@ namespace predator {
 		KeyReleasedEvent(int keycode) :
 			KeyEvent(keycode){}
 
-		std::string toString()const override {
+		std::string ToString()const override {
 			std::stringstream ss;
 			ss << "KeyReleasedEvent " << m_keycode;
 			return ss.str();

@@ -1,6 +1,5 @@
 #pragma once
 #include"Event.h"
-#include<sstream>
 namespace predator {
 	class PD_API MouseMovedEvent :public Event {
 	public:
@@ -8,7 +7,7 @@ namespace predator {
 			m_mouseX(x),m_mouseY(y){}
 		inline float getX() const { return m_mouseX; }
 		inline float getY() const { return m_mouseY; }
-		std::string toString() const override {
+		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "Mouse Moved " << m_mouseX << " " << m_mouseY;
 			return ss.str();
@@ -25,7 +24,7 @@ namespace predator {
 			mouse_x_offset(x_offset), mouse_y_offset(y_offset) {}
 		inline float getX() const { return mouse_x_offset; }
 		inline float getY() const { return mouse_y_offset; }
-		std::string toString() const override {
+		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "Mouse Moved " << getX() << " " << getY();
 			return ss.str();
@@ -49,7 +48,7 @@ namespace predator {
 	public:
 		MouseButtonPressedEvent(int button) :
 			MouseButtonEvent(button) {}
-		std::string toString() const override {
+		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "Mouse Button Pressed Event " << getButton();
 			return ss.str();
@@ -69,7 +68,7 @@ namespace predator {
 	public:
 		MouseButtonReleasedEvent(int button) :
 			MouseButtonEvent(button) {}
-		std::string toString() const override {
+		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "Mouse Button released Event " << getButton();
 			return ss.str();
